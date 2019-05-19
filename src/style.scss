@@ -1,0 +1,118 @@
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__header{
+    position: relative;
+    min-width: 95%;
+    height: 80px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 5px -2px rgba(0,0,0,0.3);
+    &__buttons{
+      margin-left: 64px;
+      &_button{
+        margin-right: 6px;
+        padding: 8px 14px;
+        background-color: #0271c7;
+        border-radius: 3px;
+        color: #ffffff;
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0 3px 5px -2px rgba(0,0,0,0.3);
+      }
+    }
+    &__search{
+      margin-right: 61px;
+      & i{
+        margin-right: 6px;
+        color: #cccccc;
+      }
+      &__input{
+        height: 27px;
+        border-radius: 3px;
+        font-size: 15px;
+        border: 1px solid #cccccc;
+        padding-left: 6px;
+      }
+    }
+  }
+  &__calendar-table{
+    width: 90%;
+    margin-top: 10px;
+    &__main-calendar{
+      width: 100%;
+      line-height: 1.2em;
+      font-size: 15px;
+      text-align: center;
+      border-spacing: 0;
+      border-collapse: collapse;
+      &_main-row{
+        & td{
+          width: 14%;
+          & #today{
+            cursor: pointer;
+          }
+        }
+        & td:nth-child(2){
+          min-width: 12%;
+          font-size: 21px;
+          font-family: sans-serif;
+          height: 40px;
+        }
+        & i {
+          padding: 5px 8px;
+          background-color: #ffffff;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        & button {
+          padding: 5px 8px;
+          background-color: #ffffff;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+        }
+      }
+      &_day-of-week{
+        border: 1px solid #cccccc;
+        & td{
+          width: 14.29%;
+          border: 1px solid #cccccc;
+          height: 120px;
+        }
+      }
+      & tbody td{
+        color: rgb(44, 86, 122);
+        width: 14.28%;
+        border: 1px solid #cccccc;
+        height: 100px;
+        text-align: left;
+        padding-left: 10px;
+        vertical-align: top;
+        padding-top: 7px;
+      }
+      & tbody td:hover{
+        background-color: #ececec;
+      }
+/*      & tbody td:nth-child(n+6){
+        color: rgb(231, 140, 92);
+      }*/
+      & tbody td.today{
+        background: #f4f4f4;
+        color: #727272;
+        font-weight: 600;
+        border: 2px solid #cccccc;
+      }
+      & tbody td.add-event{
+        background-color: #c2e4fe;
+      }
+    }
+  }
+}
+
+
